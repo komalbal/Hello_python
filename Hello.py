@@ -1,4 +1,5 @@
 import sys
-sys.stdout.flush()
 sys.stdout.write("Hello")
+sys.stdout.flush()
 print("\n\nHello World..")
+sys.stdout.flush()
