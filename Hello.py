@@ -1,9 +1,17 @@
 import threading
+import time
+import sys
 
-coutn=0
 def printit():
+	print "Hello"
 	
-		threading.Timer(1.0, printit).start()
-		print "Hello, World!"
-
-printit()
+def runthread():
+	cnt=0
+	while cnt < 5:
+		t=threading.Thread(target=printit);
+		t.start()
+		cnt=cnt+1
+		time.sleep(5)
+	sys.exit()
+		
+runthread()
